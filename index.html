@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="app.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/f5799efde7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__container">
+        <div class="logo">
+          <h1 class="nav__logo">M</h1>
+        </div>
+        <ul class="nav__links">
+          <li>
+            <a href="" class="nav__link">Home</a>
+          </li>
+          <li>
+            <a href="" class="nav__link">Movies</a>
+          </li>
+          <li>
+            <a href="" class="btn">Contact Us</a>
+          </li>
+        </ul>
+
+        <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+                <li class="menu__list">
+                    <a href="" class="menu__link" onclick="closeMenu()">Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href="" class="menu__link" onclick="closeMenu()">Movies</a>
+                </li>
+                <li class="menu__list">
+                    <a href="" class="menu__link" onclick="closeMenu()">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="search__wrap">
+            <h1> Find Your Movie!</h1>
+            <div class="input__wrap">
+              <input type="text" placeholder="Search for movies!!" onchange="onSearchChange(event)" />                
+              <i class="fas fa-search icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="movies">
+      <div class="container__main">
+        <div class="row">
+          <div class="results__wrapper">
+            <h3 class="title"> Trending Now:</h3>
+            <div class="movie__filter">
+              <select id="sort" onchange="sortMovieYear(event)">
+                <option value selected>Sort</option>
+                <option value="new_to_old">New to Old</option>
+                <option value="old_to_new">Old to New</option>
+              </select>
+            </div>
+          </div>
+          <div class="loading">
+            <i class="fas fa-spinner movies__loading--spinner"></i>
+          </div>
+          <div class="movie__results">
+            <div class="movie">
+              <figure class="movie__poster">
+                <img class="movie__cover" src="./assets/mario.jpg" alt="movie">
+              </figure>
+              <h4 class="movie__title">Super Mario Bros</h4>
+              <p class="movie__year">2023</p>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img class="movie__cover" src="./assets/barbie.jpg" alt="movie">
+              </figure>
+              <h4 class="movie__title">Barbie</h4>
+              <p class="movie__year">2023</p>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img class="movie__cover" src="./assets/freedom.png" alt="movie">
+              </figure>
+              <h4 class="movie__title">Sound of Freedom</h4>
+              <p class="movie__year">2022</p>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img class="movie__cover" src="./assets/mansion.jpg" alt="movie">
+              </figure>
+              <h4 class="movie__title">Haunted Mansion</h4>
+              <p class="movie__year">2023</p>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img class="movie__cover" src="./assets/op.png" alt="movie">
+              </figure>
+              <h4 class="movie__title">Oppenheimer</h4>
+              <p class="movie__year">2023</p>
+            </div>
+            <div class="movie">
+              <figure class="movie__poster">
+                <img class="movie__cover" src="./assets/mermaid.png" alt="movie">
+              </figure>
+              <h4 class="movie__title">The Little Mermaid</h4>
+              <p class="movie__year">2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container__main">
+        <div class="row__footer">
+          <div class="footer__links">
+            <a href="#" class="footer__link">Home</a>
+            <a href="" class="footer__link">Movies</a>
+            <a href="" class="footer__link">Contact Us</a>
+          </div>
+          <div class="copyright">
+            Copyright &copy 2023, Andrew McGuire 
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
